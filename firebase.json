@@ -1,0 +1,47 @@
+{
+  "hosting": {
+    "public": "build",
+    "redirects": [
+      {
+        "source": "/signin",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/admin",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/account",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/pw-forget",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/home",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/signup",
+        "destination": "/",
+        "type": 301
+      }
+    ],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  "functions": {
+    "predeploy": [
+      "npm --prefix \"$RESOURCE_DIR\" run lint"
+    ]
+  }
+}
